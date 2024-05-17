@@ -5,14 +5,14 @@ app = Flask(__name__)
 
 # MySQL database connection settings
 db_config = {
-    'user': 'admin',
-    'password': '12345678',
-    'host': 'database-1.c3y8am2gya2m.us-east-2.rds.amazonaws.com',
-    'database': 'gokul'
+    'user': 'admin',    # <-- Change this
+    'password': '12345678',    # <-- Change this
+    'host': 'database-1.c3y8am2gya2m.us-east-2.rds.amazonaws.com',   # <-- Change this
+    'database': 'gog'   # <-- Change this
 }
 @app.route('/', methods=['GET'])
 def home():
-    return render_template('index.html')  # replace 'your_form.html' with the name of your HTML file
+    return render_template('index.html')  # <-- Change this replace 'your_form.html' with the name of your HTML file
 
 @app.route('/submit', methods=['POST'])
 
@@ -25,7 +25,7 @@ def submit_form():
     cursor = cnx.cursor()
 
     # Insert the form data into the database
-    query = "INSERT INTO data (Name, Email) VALUES (%s, %s)"
+    query = "INSERT INTO users (name, email) VALUES (%s, %s)"     # <-- Change this into your table name which you have created in mysql
     values = (name, email)
     cursor.execute(query, values)
     cnx.commit()
