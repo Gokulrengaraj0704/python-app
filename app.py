@@ -6,8 +6,8 @@ app = Flask(__name__)
 # MySQL database connection settings
 db_config = {
     'user': 'admin',    # <-- Change this
-    'password': '12345678',    # <-- Change this
-    'host': 'database-1.c3y8am2gya2m.us-east-2.rds.amazonaws.com',   # <-- Change this
+    'password': 'xxxxxxxx',    # <-- Change this
+    'host': 'database-1.c3djsfi88999.us-east-2.rds.amazonaws.com',   # <-- Change this
     'database': 'gog'   # <-- Change this
 }
 @app.route('/', methods=['GET'])
