@@ -1,15 +1,15 @@
 from flask import Flask, render_template, request
-import mysql.connector
+#import mysql.connector
 
 app = Flask(__name__)
 
 # MySQL database connection settings
-db_config = {
+'''db_config = {
     'user': 'admin',    # <-- Change this
     'password': 'xxxxxxxx',    # <-- Change this
     'host': 'database-1.c3djsfi88999.us-east-2.rds.amazonaws.com',   # <-- Change this
     'database': 'gog'   # <-- Change this
-}
+}'''
 @app.route('/', methods=['GET'])
 def home():
     return render_template('index.html')  # <-- Change this replace 'your_form.html' with the name of your HTML file
